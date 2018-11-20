@@ -1,13 +1,15 @@
 import * as React from 'react';
+import { ISpell } from 'src/models/spell.interface';
 
-class Spell extends React.Component {
-    public name: string;
-    public level: number;
+export class SpellItem extends React.Component<ISpell> {
 
-    public constructor(props: any) {
+    public constructor(props: ISpell) {
         super(props);
+    }
 
+    public render() {
+        return (
+            <div>A spell item: {this.props.name}</div>
+        )
     }
 }
-
-export default Spell;
