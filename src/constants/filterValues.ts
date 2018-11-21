@@ -1,4 +1,4 @@
-export enum DndClasses {
+export enum DndClass {
     Bard = 'Bard',
     Cleric = 'Cleric',
     Druid = 'Druid',
@@ -9,7 +9,7 @@ export enum DndClasses {
     Wizard = 'Wizard'
 }
 
-export enum MagicSchools {
+export enum School {
     Abjuration = 'Abjuration',
     Conjuration = 'Conjuration',
     Divination = 'Divination',
@@ -20,7 +20,7 @@ export enum MagicSchools {
     Transmutation = 'Transmutation'
 }
 
-export enum SpellLevels {
+export enum Level {
     Cantrip = 'Cantrip',
     Level1 = 'Level 1',
     Level2 = 'Level 2',
@@ -31,5 +31,11 @@ export enum SpellLevels {
     Level7 = 'Level 7',
     Level8 = 'Level 8',
     Level9 = 'Level 9'
+}
+
+export enum SpellFilterType {
+    Level = "Level",
+    School = "School",
+    DndClass = "Class"
 }
 
