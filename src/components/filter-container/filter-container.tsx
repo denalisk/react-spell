@@ -15,29 +15,14 @@ export class FilterContainer extends React.Component {
                 {Object.keys(SpellFilterType).map(filterType => {
                     return (
                         <div>
-
+                            Filter by {SpellFilterType[filterType]}:
+                            {Object.keys(DndClass).map(key => {
+                                return <FilterItem filter={{ filterType: SpellFilterType.DndClass, filterValue: DndClass[key] }} />
+                            })}
                         </div>
                     );
                 })}
-                <div>Classes:
-                    {Object.keys(DndClass).map(key => {
-                        return <FilterItem filter={ { filterType: SpellFilterType.DndClass, filterValue: DndClass[key] } }/>
-                    })}
-                </div>
             </div>
         )
-    }
-
-    // private buildFilterGroups(): IFilterGroup[] {
-        
-
-    // }
-
-    // private buildDndClassFilters(): IFilterGroup[] {
-    //     return 
-    // }
-
-    private filterTypeSwitch(filterType: string) {
-        
     }
 }
